@@ -6,5 +6,5 @@
 ### Added
 - Initial test of extention
 
-[Unreleased]: https://github.com/Iselk/auto-terminal-start/compare/v0.0.1...HEAD
-[0.0.1]: https://github.com/Iselk/auto-terminal-start/releases/tag/v0.0.1
+[Unreleased]: https://github.com/Iselk/auto-start-terminal/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/Iselk/auto-start-terminal/releases/tag/v0.0.1
