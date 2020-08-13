@@ -2,6 +2,10 @@
 	"name": "auto-start-terminal",
 	"displayName": "Auto Start Terminal",
 	"description": "Enables you to define commands to run at launch in the settings.",
+	"publisher": "Icelk",
+	"repository": {
+		"url": "https://github.com/Iselk/auto-start-terminal"
+	},
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.47.0"
