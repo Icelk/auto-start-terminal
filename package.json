@@ -1,0 +1,78 @@
+{
+	"name": "auto-start-terminal",
+	"displayName": "Auto Start Terminal",
+	"description": "Enables you to define commands to run at launch in the settings.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:autostartterminal.helloWorld",
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Auto Start Terminal",
+			"properties": {
+				"auto-start-terminal.commands": {
+					"type": "array",
+					"default": [],
+					"items": {
+						"type": "string"
+					},
+					"description": "The commands to start in terminals at launch. First will launch in open terminal."
+				},
+				"auto-start-terminal.showTerminal": {
+					"type": "string",
+					"default": "keep",
+					"enum": [
+						"show",
+						"hide",
+						"keep"
+					],
+					"enumDescriptions": [
+						"Forces VS Code to show terminal",
+						"Forces VS Code to hide terminal",
+						"Keeps current workbench layout"
+					],
+					"description": "If the terminal should be opened or closed at launch."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "autostartterminal.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "autostartterminal.start",
+				"title": "Started terminals"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.47.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"eslint": "^7.6.0",
+		"@typescript-eslint/eslint-plugin": "^3.8.0",
+		"@typescript-eslint/parser": "^3.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.0.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.4.0"
+	}
+}
