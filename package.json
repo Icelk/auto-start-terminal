@@ -44,6 +44,11 @@
 						"Keeps current workbench layout"
 					],
 					"description": "If the terminal should be opened or closed at launch."
+				},
+				"auto-start-terminal.overrideActive": {
+					"type": "boolean",
+					"default": true,
+					"description": "Should the first command run in the active terminal?"
 				}
 			}
 		},

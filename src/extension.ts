@@ -13,9 +13,11 @@ export function activate (/* context: vscode.ExtensionContext */)
 
 	let terminals = Array<vscode.Terminal>();
 
+	const overrideActive = settings.get("auto-start-terminal.overrideActive") as boolean;
+
 	for (let i = 0; i < startCommands.length; i++)
 	{
-		if (i === 0 && vscode.window.activeTerminal !== undefined)
+		if (i === 0 && vscode.window.activeTerminal !== undefined && overrideActive)
 		{
 			let terminal = vscode.window.activeTerminal;
 			terminal.sendText(startCommands[i], true);
@@ -30,7 +32,7 @@ export function activate (/* context: vscode.ExtensionContext */)
 	}
 
 	const showOnLaunch = settings.get("auto-start-terminal.showTerminal") as string;
-	if (showOnLaunch === "show")
+	if (showOnLaunch === "show" && overrideActive)
 	{
 		terminals[0].show();
 	}
