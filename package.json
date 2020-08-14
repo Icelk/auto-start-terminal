@@ -6,7 +6,7 @@
 	"repository": {
 		"url": "https://github.com/Iselk/auto-start-terminal"
 	},
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
@@ -14,7 +14,6 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:autostartterminal.helloWorld",
 		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
@@ -53,10 +52,6 @@
 			}
 		},
 		"commands": [
-			{
-				"command": "autostartterminal.helloWorld",
-				"title": "Hello World"
-			},
 			{
 				"command": "autostartterminal.start",
 				"title": "Started terminals"
