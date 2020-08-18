@@ -50,13 +50,7 @@
 					"description": "Should the first command run in the active terminal?"
 				}
 			}
-		},
-		"commands": [
-			{
-				"command": "autostartterminal.start",
-				"title": "Started terminals"
-			}
-		]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
