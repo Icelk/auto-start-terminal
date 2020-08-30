@@ -29,6 +29,14 @@
 					},
 					"description": "The commands to start in terminals at launch. First will launch in open terminal."
 				},
+				"auto-start-terminal.preparedCommands": {
+					"type": "array",
+					"default": [],
+					"items": {
+						"type": "string"
+					},
+					"description": "The items will be typed into terminals at launch. First will launch in open terminal."
+				},
 				"auto-start-terminal.showTerminal": {
 					"type": "string",
 					"default": "keep",
